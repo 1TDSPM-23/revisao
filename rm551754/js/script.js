@@ -51,3 +51,32 @@
 // for (const indice in alunos){
 //     const item = `Aluno ${alunos[indice]}`;
 //     console.log (item)
+
+
+//Declarar um array de Objetos de alunos:
+let alunos = [
+    {nome:"João",nota:8,situacao:"Aprovado"},
+    {nome:"Maria",nota:3,situacao:"Reprovado"},
+    {nome:"Pedro",nota:7,situacao:"Aprovado"},
+    {nome:"Ana",nota:2,situacao:"Reprovado"},
+    {nome:"Jose",nota:5,situacao:"Recuperação"}
+];
+
+//imprimindo array de objetos
+console.log(alunos);
+
+console.log("\n")
+
+//imprimindo um unico objeto da array
+console.log(`Aluno ${alunos[3].nome} ${alunos[3].nota} ${alunos[3].situacao}`);
+
+console.log("\n")
+
+//imprimindo a lista de objetos com foreach
+alunos.forEach( aluno=>{
+    if(aluno["situacao"] == "Recuperação"){
+        console.log(`O aluno ${aluno["nome"]} tirou a nota ${aluno["nota"]} ficou de ${aluno["situacao"]}`)    
+    }else{
+        console.log(`O aluno ${aluno["nome"]} tirou a nota ${aluno["nota"]} e está ${aluno["situacao"]}`)
+    }
+});
