@@ -53,3 +53,35 @@
 
 // //Quebrando Linha
 // console.log("\n");
+
+//Declarar um array de Objetos de alunos:
+let alunos = [
+    {"Nome": "João", "Nota": 8, "Situação":"Aprovado"},
+    {"Nome": "Maria", "Nota": 3, "Situação":"Reprovado"},
+    {"Nome": "Pedro", "Nota": 7, "Situação":"Aprovado"},
+    {"Nome": "Ana", "Nota": 2, "Situação":"Reprovado"},
+    {"Nome": "Jose", "Nota": 5, "Situação":"Recuperação"},
+];
+
+//Imprimindo o array de objetos:
+console.log(alunos);
+
+//Quebrando linha
+console.log("\n");  
+
+//Imprimindo um únco objeto do Array
+console.log(`Aluno ${alunos[0].nome} - ${alunos[0].nota} - ${alunos[0].situação}`); 
+
+//Quebrando linha
+console.log("\n");  
+
+//Imprimindo a lista de objetos com forEach:
+alunos.forEach(aluno=>{
+    if(aluno["Situação"] == "Recuperação")
+        console.log(`O aluno ${aluno["Nome"]} tirou a nota ${aluno["Nota"]} e está de ${aluno["Situação"]}`)
+    else
+        console.log(`O aluno ${aluno["Nome"]} tirou a nota ${aluno["Nota"]} e está ${aluno["Situação"]}`)
+})
+
+//Quebrando linha
+console.log("\n"); 
