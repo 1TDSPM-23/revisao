@@ -32,3 +32,27 @@
 //     const item = `Aluno ${alunos[indice]}`;
 //     console.log(item);
 // }
+
+// let alunos = [
+//     {nome:"João",nota:8,situacao:"Aprovado"},
+//     {nome:"Maria",nota:3,situacao:"Reprovado"},
+//     {nome:"Pedro",nota:7,situacao:"Aprovado"},
+//     {nome:"Ana",nota:2,situacao:"Reprovado"},
+//     {nome:"Jose",nota:5,situacao:"Recuperação"}
+// ];
+
+// console.log(alunos);
+// console.log("\n");
+
+// console.log(`Aluno ${alunos[0].nome} - ${alunos[0].nota} - ${alunos[0].situacao}`);
+// console.log("\n");
+
+
+// alunos.forEach( aluno=>{
+//     if(aluno["situacao"] == "Recuperação"){
+//         console.log(`O aluno ${aluno["nome"]} tirou a nota ${aluno["nota"]} ficou de ${aluno["situacao"]}`)    
+//     }else{
+//         console.log(`O aluno ${aluno["nome"]} tirou a nota ${aluno["nota"]} e está ${aluno["situacao"]}`)
+//     }
+// });
+// console.log("\n");
