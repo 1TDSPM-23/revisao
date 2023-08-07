@@ -105,10 +105,7 @@
 // console.log("\n");
 
 
-//Declarando um array de nomes de alunos:
-let alunos = [
-    "João", "Pedro", "Robson", "Jorge", "Luis", "Marieta", "Enzo"
-]
+
 
 // //Inserindo um elemento no final do array com o método push:
 // alunos.push("Maria");
@@ -181,8 +178,30 @@ let alunos = [
 // //Quebrando linha
 // console.log("\n");
 
+//Declarando um array de nomes de alunos:
+let alunos = [
+    "João", "Pedro", "Robson", "Jorge", "Luis", "Marieta", "Enzo"
+]
+
 //Imprimindo o array completo:
 console.log(alunos);
 //Quebrando linha
 console.log("\n");
 
+const botaoPesquisar = document.getElementById("btnProcurar");
+
+botaoPesquisar.addEventListener("click",(evt)=>{
+    console.log(evt.target);
+
+    evt.preventDefault();
+
+    //Recuperando o valor do input:
+    const nome = document.getElementById("idNmAl").value;
+
+    //Verificando se o nome existe no array:
+    if(alunos.indexOf(nome) != -1){
+        alert(`O aluno ${nome} está na lista`);
+    }else{
+        alert(`O aluno ${nome} não está na lista`);
+    }
+});
