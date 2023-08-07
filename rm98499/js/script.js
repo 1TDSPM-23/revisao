@@ -75,3 +75,18 @@ alunos.forEach( aluno=>{
 
 //Quebrando linha
 console.log("\n");
+
+//Recuperando o elemento div da página:
+const divLista = document.getElementById("lista-nomes");
+
+//
+alunos.forEach( (aluno)=>{
+    divLista.innerHTML += <p>Aluno ${aluno["Nome"]} - ${aluno["Nota"]} - ${aluno["situação"]}</p>
+});
+
+alunos.forEach( (aluno)=>{
+
+});
+
+
+
