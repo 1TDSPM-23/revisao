@@ -105,56 +105,86 @@ let alunos = [
 ]
 
 //inserindo um elemento no final do array com o metodo push:
-alunos.push("Maria");
+//alunos.push("Maria");
 
 //Inserindo um elemento no inicio do array com metodo unshift:
-alunos.unshift("José");
+//alunos.unshift("José");
 
 //imprimindo o array completo
-console.log(alunos);
+//console.log(alunos);
 
 //removendo o ultimo elemento do array com metodo pop:
-alunos.pop();
+//alunos.pop();
 
-console.log(alunos);
+//console.log(alunos);
 
 //removendo o primeiro elemento do array com metodo shift:
-alunos.shift();
+//alunos.shift();
 
-console.log(alunos);
+//console.log(alunos);
 
 //Quebrando linha
-console.log("\n");
+//console.log("\n");
 
 //Colocando o array em ordem alfabética com o método sort:
-alunos.sort();
+//alunos.sort();
 //Imprimindo o array completo:
-console.log(alunos);
+//console.log(alunos);
 
 //colocando o array em ordem inversa com o metodo reverse:
-alunos.reverse();
-console.log(alunos);
-console.log("\n");
+//alunos.reverse();
+//console.log(alunos);
+//console.log("\n");
 
 //utilizando o metodo indexOf para encontrar a posição de um elemento do array:
-let posicao = alunos.indexOf("Marieta");
-console.log(`O aluno está na posição ${posicao}`);
+// let posicao = alunos.indexOf("Marieta");
+// console.log(`O aluno está na posição ${posicao}`);
 
 //utilizando o metodo splice para alterar um elemento do array:
-alunos.splice(1,1,"Juca");
-console.log(alunos);
-console.log("\n")
+// alunos.splice(1,1,"Juca");
+// console.log(alunos);
+// console.log("\n")
 
 //utilizando o metodo splice para alterar um elemento do array:
-alunos.splice(1,2,"Arnaldo");
-console.log(alunos);
-console.log("\n")
+// alunos.splice(1,2,"Arnaldo");
+// console.log(alunos);
+// console.log("\n")
 
 //Utilizando o método splice remover um elemento do array:
-alunos.splice(3,1);
+//alunos.splice(3,1);
 //Imprimindo o array completo:
-console.log(alunos);
+//console.log(alunos);
 //Quebrando linha
-console.log("\n");
+//console.log("\n");
+//alunos.splice(alunos.indexOf("Arnaldo"), 1)
 
-alunos.splice(alunos.indexOf("Arnaldo"), 1)
+const botaoPesquisar = document.getElementById("btnProcurar");
+
+botaoPesquisar.addEventListener("click", (evt)=>{
+    
+    evt.preventDefault(); //previne o recarregamento da pagina/formulario/evento -- pra n dar refresh na pagina 
+    
+    //recuperando os dados do input:
+    const nome = document.getElementById("idNmAl").value;
+
+    //verificando se o nome existe no array
+    if(alunos.indexOf(nome) != -1){
+        alert(`O aluno ${nome} está na lista`)
+    }else{
+        alert(`O aluno ${nome} não está na lista`)
+    }
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
