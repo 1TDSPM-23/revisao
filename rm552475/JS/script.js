@@ -86,5 +86,24 @@ alunos.forEach(aluno =>{
 
     }
 
-    
+})
+//quebrando linha 
+console.log("\n")
+//recuperando o elemento div do html
+const divLista = document.getElementById("lista-nomes")
+
+//inserindo um elemento html dentro da div usando foreach
+/*alunos.forEach( (aluno)=>{
+    divLista.innerHTML = `<p> Aluno ${aluno["Nome"]}- ${aluno["Nota"]}- ${aluno["Situacao"]} </p>`
+})
+*/
+
+alunos.forEach( (aluno,index)=>{
+
+    let p  = document.createElement("p")
+    p.textContent =`Aluno ${aluno["Nome"]}- ${aluno["Nota"]}- ${aluno["Situacao"]} `
+    divLista.appendChild(p)
+
+    //imprimir o id do elemento pai do elemento p
+    console.log(index+" "+p.parentElement.id)
 })
