@@ -80,3 +80,20 @@ alunos.forEach( aluno=>{
 //Quebrando linha
 console.log("\n");
 
+//Recuperando o elemento div da página:
+const divLista = document.getElementById("lista-nomes");
+
+//Imprimindo a lista de objetos com forEach e apresentando na página inserindo um elemento HTML dentro da div:
+// alunos.forEach( (aluno)=>{
+//     divLista.innerHTML += `<p>Aluno ${aluno["nome"]} - ${aluno["nota"]} - ${aluno["situacao"]}</p>`;
+// });
+
+//Imprimindo a lista de objetos com forEach e apresentando na página inserindo um elemento HTML dentro da div:
+alunos.forEach( (aluno)=>{
+    //Criando um elemento p no HTML:
+    let p = document.createElement("p");
+    //Inserindo o texto no elemento p:
+    p.textContent = `Aluno ${aluno["nome"]} - ${aluno["nota"]} - ${aluno["situacao"]}`;
+    //Inserindo o elemento p dentro da div:
+    divLista.appendChild(p);
+});
