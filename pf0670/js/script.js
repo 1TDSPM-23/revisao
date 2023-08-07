@@ -96,71 +96,87 @@
 let alunos = [
     "João", "Pedro", "Robson", "Jorge", "Luis", "Marieta", "Enzo"
 ]
-
-//Inserindo um elemento no final do array com o método push:
-alunos.push("Maria");
-
-//Inserindo um elemento no início do array com o método unshift:
-alunos.unshift("José");
-
-//imprimindo o array completo:
-console.log(alunos);
-
-//Removendo o último elemento do array com o método pop:
-alunos.pop();
-
-//Imprimindo o array completo:
-console.log(alunos);
-
-//Removendo o primeiro elemento do array com o método shift:
-alunos.shift(); 
-
-//Imprimindo o array completo:
-console.log(alunos);
-
-//Colocando o array em ordem alfabética com o método sort:
-alunos.sort();
+//
+////Inserindo um elemento no final do array com o método push:
+//alunos.push("Maria");
+//
+////Inserindo um elemento no início do array com o método unshift:
+//alunos.unshift("José");
+//
+////imprimindo o array completo:
+//console.log(alunos);
+//
+////Removendo o último elemento do array com o método pop:
+//alunos.pop();
+//
+////Imprimindo o array completo:
+//console.log(alunos);
+//
+////Removendo o primeiro elemento do array com o método shift:
+//alunos.shift(); 
+//
+////Imprimindo o array completo:
+//console.log(alunos);
+//
+////Colocando o array em ordem alfabética com o método sort:
+//alunos.sort();
+////Imprimindo o array completo:
+//console.log(alunos);
+////Quebrando linha
+//console.log("\n");
+//
+////Colocando o array em ordem inversa com o método reverse:
+//alunos.reverse();
+////Imprimindo o array completo:
+//console.log(alunos);
+////Quebrando linha
+//console.log("\n");
+//
+////Utilizando o método indexOf para encontrar a posição de um elemento no array:
+//let posicao = alunos.indexOf("juca");
+//console.log(`O aluno juca está na posição ${posicao}`);
+////Quebrando linha
+//console.log("\n");
+//
+////Utilizando o método splice para alterar um elemento do array:
+//alunos.splice(1,1,"Juca");
+////Imprimindo o array completo:
+//console.log(alunos);
+////Quebrando linha
+//console.log("\n");
+//
+////Utilizando o método splice para alterar e remover um elemento do array:
+//alunos.splice(1,2,"Arnaldo");
+////Imprimindo o array completo:
+//console.log(alunos);
+////Quebrando linha
+//console.log("\n");
+//
+////Utilizando o método splice remover um elemento do array:
+//alunos.splice(3,1);
+////Imprimindo o array completo:
+//console.log(alunos);
+////Quebrando linha
+//console.log("\n");
+//
+//alunos.splice(alunos.indexOf("Arnaldo"), 1);
 //Imprimindo o array completo:
 console.log(alunos);
 //Quebrando linha
 console.log("\n");
 
-//Colocando o array em ordem inversa com o método reverse:
-alunos.reverse();
-//Imprimindo o array completo:
-console.log(alunos);
-//Quebrando linha
-console.log("\n");
+const botaoPesquisar = document.getElementById("btnProcurar")
 
-//Utilizando o método indexOf para encontrar a posição de um elemento no array:
-let posicao = alunos.indexOf("juca");
-console.log(`O aluno juca está na posição ${posicao}`);
-//Quebrando linha
-console.log("\n");
+botaoPesquisar.addEventListener("click",(evt)=>{
+    evt.preventDefault();
 
-//Utilizando o método splice para alterar um elemento do array:
-alunos.splice(1,1,"Juca");
-//Imprimindo o array completo:
-console.log(alunos);
-//Quebrando linha
-console.log("\n");
+    //Recuperando o valor do input
+    const nome = document.getElementById("idNmal").value;
 
-//Utilizando o método splice para alterar e remover um elemento do array:
-alunos.splice(1,2,"Arnaldo");
-//Imprimindo o array completo:
-console.log(alunos);
-//Quebrando linha
-console.log("\n");
-
-//Utilizando o método splice remover um elemento do array:
-alunos.splice(3,1);
-//Imprimindo o array completo:
-console.log(alunos);
-//Quebrando linha
-console.log("\n");
-
-alunos.splice(alunos.indexOf("Arnaldo"), 1);
-//Imprimindo o array completo:
-console.log(alunos);
-//Quebrando linha
-console.log("\n");
+    //Verificando se o nome existe no array:
+    if(alunos.indexOf(nome) != -1){
+        alert(`O aluno ${nome} está na lista`);
+    }else{
+        alert(`O aluno ${nome} não está na lista`);
+    }
+});
