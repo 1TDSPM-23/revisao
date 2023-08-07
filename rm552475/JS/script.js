@@ -188,3 +188,35 @@ console.log("\n")
 alunos.splice(alunos.indexOf("arnaldo"),1)
 
 console.log(alunos)
+
+//quebrando linha 
+console.log("\n")
+
+
+const texto = document.querySelector("#nome").value
+const botao =  document.querySelector("#btn-psq")
+
+botao.addEventListener("click",(evt)=>{
+
+    evt.preventDefault();
+
+    //verificando se o nome existe no array
+    if(alunos.indexOf(nome) != -1){
+        alert(`O aluno ${texto} está na lista`)
+    }
+    else{
+        alert(`O aluno ${texto} não está na lista`)
+    }
+
+})
+
+
+/*let n = document.createElement("p")
+
+n.textContent = texto.value
+
+alunos.forEach( (aluno)=>{
+    if(n == aluno){
+
+    }
+})*/
