@@ -55,7 +55,7 @@
 
 
 //Declarar um array de objetos de alunos
-
+/*
 let alunos = [
     {"Nome":'João', 'Nota':8, 'Situacao':'Aprovado'},
     {"Nome":'Maria', 'Nota':5, 'Situacao':'Reprovado'},
@@ -97,13 +97,94 @@ const divLista = document.getElementById("lista-nomes")
     divLista.innerHTML = `<p> Aluno ${aluno["Nome"]}- ${aluno["Nota"]}- ${aluno["Situacao"]} </p>`
 })
 */
-
+/*
 alunos.forEach( (aluno,index)=>{
-
+    //criando elemento
     let p  = document.createElement("p")
+    //inserindo texto no elemento p
     p.textContent =`Aluno ${aluno["Nome"]}- ${aluno["Nota"]}- ${aluno["Situacao"]} `
+    //inserindo o p dentro da div
     divLista.appendChild(p)
 
     //imprimir o id do elemento pai do elemento p
     console.log(index+" "+p.parentElement.id)
 })
+
+//quebrando linha 
+console.log("\n")*/
+
+//declarando array
+
+let alunos = ["joao","pedro","robson","jorge","luiz","marieta","enzo"]
+
+//inserindo um elemento no inicio do array com unshift
+alunos.unshift("jose")
+
+//imprimindo o array
+console.log(alunos)
+
+//removendo o ultimo elemento
+alunos.pop()
+
+//imprimindo o array
+console.log(alunos)
+
+//removendo o primeiro elemento com shift
+alunos.shift()
+
+//imprimindo o array
+console.log(alunos)
+
+//quebrando linha 
+console.log("\n")
+
+//colocando o array em ordem alfabetica com sort
+alunos.sort()
+
+//imprimindo o array
+console.log(alunos)
+
+//quebrando linha 
+console.log("\n")
+
+//colocando o array em ordem reversa com reverse
+alunos.reverse()
+
+console.log(alunos)
+
+//quebrando linha 
+console.log("\n")
+
+//utilizando o indexxOf para localizar um elemento no array
+
+let posicao  = alunos.indexOf("juca")
+
+console.log(`O aluno juca esta na posicao ${posicao}`)
+
+//usando splice para alterar um elemento do array
+alunos.splice(1,1,"juca")
+
+console.log(alunos)
+
+//quebrando linha 
+console.log("\n")
+
+//usando splice para alterar um elemento do array
+alunos.splice(1,2,"arnaldo")
+
+console.log(alunos)
+
+//quebrando linha 
+console.log("\n")
+
+//usando splice para remover um elemento do array
+alunos.splice(3,1,"arnaldo")
+
+console.log(alunos)
+
+//quebrando linha 
+console.log("\n")
+
+alunos.splice(alunos.indexOf("arnaldo"),1)
+
+console.log(alunos)
