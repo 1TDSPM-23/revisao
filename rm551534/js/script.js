@@ -175,3 +175,26 @@ console.log(alunos);
 //Quebrando linha
 console.log("\n");
 
+alunos.splice(alunos.indexOf("Enzo"),1);
+//Imprimindo o array completo:
+console.log(alunos);
+//Quebrando linha
+console.log("\n");
+
+const botaoPesquisar = document.getElementById("btnProcurar");
+
+botaoPesquisar.addEventListener("click", (evt)=>{;
+
+evt.preventDefault();
+
+
+    //Recuperando o valor do input:
+    const nome = document.getElementById("idNmAl").value;
+
+    //Verificando se o nome existe no array:
+    if(alunos.indexOf(nome) != - 1){
+        alert(`O aluno ${nome} está na lista`);
+    }else{
+        alert(`O aluno ${nome} não está na lista`);
+    }
+});
