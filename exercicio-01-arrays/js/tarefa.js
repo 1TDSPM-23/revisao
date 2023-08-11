@@ -33,16 +33,13 @@ botaAddTarefa.addEventListener("click",( evt )=>{
         //Localizando o indice do elemento a ser removido
         let indice = listaTarefasArray.indexOf(conteudoDoLi[0])
 
-        listaTarefasArray.splice()
+        //Removendo o indice selecionado com o método splice
+        listaTarefasArray.splice(indice,1);
         
-
-        
-       
-
         //Removendo o elemento li do HTML
         evt.target.parentNode.remove();
 
-         // console.log(evt.target.parentNode.textContent);
+        console.log(listaTarefasArray);
     });
 
     console.log(listaTarefasArray);
