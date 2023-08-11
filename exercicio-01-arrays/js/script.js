@@ -23,15 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
               const task = tasks[taskIndex];
               if (event.target.classList.contains("edit-button")) {
                   task.editing = !task.editing;
-                  updateTaskList(); // Atualize a lista após a edição ser ativada/desativada
+                  updateTaskList(); // Atualiza a lista após a edição ser ativada/desativada
               } else if (event.target.classList.contains("delete-button")) {
                   tasks.splice(taskIndex, 1);
-                  updateTaskList(); // Atualize a lista após a exclusão
+                  updateTaskList(); // Atualiza a lista após a exclusão
               } else if (event.target.classList.contains("save-button")) {
                   const input = taskItem.querySelector("input");
                   task.text = input.value;
                   task.editing = false;
-                  updateTaskList(); // Atualize a lista após salvar a edição
+                  updateTaskList(); // Atualiza a lista após salvar a edição
               }
           }
       }
