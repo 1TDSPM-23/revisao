@@ -205,3 +205,51 @@ botaoPesquisar.addEventListener("click",(evt)=>{
         alert(`O aluno ${nome} não está na lista`);
     }
 });
+
+//imprimindo o array com o método forEach:
+// let novoArrayComIndicesPares = alunos.forEach( (aluno,index)=>{
+//     if((index+1) % 2 == 0){
+//         console.log(`${index+1} - ${aluno}`);
+//         return `${index+1} - ${aluno}`;
+//     }
+// });
+// //Quebrando linha
+// console.log("\n");
+
+// //imprimindo o array com o método map:
+// novoArrayComIndicesPares.forEach( (aluno)=>{
+//     console.log(aluno);
+// });
+// //Quebrando linha
+// console.log("\n");
+
+// //imprimindo o array com o método map:
+// let novoArrayComIndicesPares = alunos.map( (aluno,index)=>{
+//     if((index+1) % 2 == 0){
+//         console.log(`${index+1} - ${aluno}`);
+//         return `${index+1} - ${aluno}`;
+//     }
+// });
+// //Quebrando linha
+// console.log("\n");
+
+// //imprimindo o novo array com o método filter:
+// novoArrayUndefined = novoArrayComIndicesPares.filter((aluno)=> aluno != undefined);
+// //Quebrando linha
+// console.log("\n");
+
+// //imprimindo o novo array com o método filter:
+// novoArrayUndefined.forEach((aluno)=> console.log(aluno));
+// //Quebrando linha
+// console.log("\n");
+
+// //Filtrando o array com o método filter utilizando o map:
+// let novoArrayComIndicesPares2 = alunos.map( (aluno,index)=>{
+//     if((index+1) % 2 == 0){
+//         console.log(`${index+1} - ${aluno}`);
+//         return `${index+1} - ${aluno}`;
+//     }
+// }).filter((aluno)=> aluno != undefined);
+// //Quebrando linha
+// console.log("\n");
+
