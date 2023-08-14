@@ -3,29 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coded By PF0670</title>
-    <script src="../js/tarefas.js" defer></script>
+    <title>Manipulando Arrays</title>
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
-    <h1>MINHAS TAREFAS</h1>
+    
+    <h1>Lista de nomes de alunos</h1>
+    <div id="lista-nomes">
+
+    </div>
 
     <div>
         <form action="#" method="get">
             <fieldset>
-                <legend>Nova Tarefa</legend>
+                <legend>Pesquisa</legend>
                 <div>
-                    <label for="">Nome Tarefa</label>
-                    <input type="text" name="tarefa" id="idTarefa" placeholder="Digite o nome da Tarefa.">
+                    <label for="nome">Nome:</label>
+                    <input type="search" name="nmAl" id="idNmAl" placeholder="Digite o nome do Aluno">
                 </div>
                 <div>
-                    <button type="submit" id="btnAddTarefa" class="botao">Adicionar</button>
+                    <button type="submit" id="btnProcurar">Pesquisar</button>
                 </div>
             </fieldset>
         </form>
     </div>
+    <div id="resultado">
 
-    <div>
-        <ul id="lista-tarefas"></ul>
     </div>
 
 </body>

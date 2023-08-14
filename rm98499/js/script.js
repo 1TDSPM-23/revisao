@@ -105,77 +105,84 @@
 // console.log("\n");
 
 
+
+
+// //Inserindo um elemento no final do array com o método push:
+// alunos.push("Maria");
+
+// //Inserindo um elemento no início do array com o método unshift:
+// alunos.unshift("José");
+
+// //Imprimindo o array completo:
+// console.log(alunos);
+
+// //Removendo o último elemento do array com o método pop:
+// alunos.pop();
+
+// //Imprimindo o array completo:
+// console.log(alunos);
+
+// //Removendo o primeiro elemento do array com o método shift:
+// alunos.shift(); 
+// //Imprimindo o array completo:
+// console.log(alunos);
+
+// //Quebrando linha
+// console.log("\n");
+
+// //Colocando o array em ordem alfabética com o método sort:
+// alunos.sort();
+// //Imprimindo o array completo:
+// console.log(alunos);
+// //Quebrando linha
+// console.log("\n");
+
+// //Colocando o array em ordem inversa com o método reverse:
+// alunos.reverse();
+// //Imprimindo o array completo:
+// console.log(alunos);
+// //Quebrando linha
+// console.log("\n");
+
+
+// //Utilizando o método indexOf para encontrar a posição de um elemento no array:
+// let posicao = alunos.indexOf("juca");
+// console.log(`O aluno Juca está na posição ${posicao}`);
+// //Quebrando linha
+// console.log("\n");
+
+// //Utilizando o método splice para alterar um elemento do array:
+// alunos.splice(1,1,"Juca");
+// //Imprimindo o array completo:
+// console.log(alunos);
+// //Quebrando linha
+// console.log("\n");
+
+// //Utilizando o método splice para alterar eu remover um elemento do array:
+// alunos.splice(1,2,"Arnaldo");
+// //Imprimindo o array completo:
+// console.log(alunos);
+// //Quebrando linha
+// console.log("\n");
+
+// //Utilizando o método splice remover um elemento do array:
+// alunos.splice(3,1);
+// //Imprimindo o array completo:
+// console.log(alunos);
+// //Quebrando linha
+// console.log("\n");
+
+// alunos.splice(alunos.indexOf("Enzo"),1);
+// //Imprimindo o array completo:
+// console.log(alunos);
+// //Quebrando linha
+// console.log("\n");
+
 //Declarando um array de nomes de alunos:
 let alunos = [
     "João", "Pedro", "Robson", "Jorge", "Luis", "Marieta", "Enzo"
 ]
 
-//Inserindo um elemento no final do array com o método push:
-alunos.push("Maria");
-
-//Inserindo um elemento no início do array com o método unshift:
-alunos.unshift("José");
-
-//Imprimindo o array completo:
-console.log(alunos);
-
-//Removendo o último elemento do array com o método pop:
-alunos.pop();
-
-//Imprimindo o array completo:
-console.log(alunos);
-
-//Removendo o primeiro elemento do array com o método shift:
-alunos.shift(); 
-//Imprimindo o array completo:
-console.log(alunos);
-
-//Quebrando linha
-console.log("\n");
-
-//Colocando o array em ordem alfabética com o método sort:
-alunos.sort();
-//Imprimindo o array completo:
-console.log(alunos);
-//Quebrando linha
-console.log("\n");
-
-//Colocando o array em ordem inversa com o método reverse:
-alunos.reverse();
-//Imprimindo o array completo:
-console.log(alunos);
-//Quebrando linha
-console.log("\n");
-
-
-//Utilizando o método indexOf para encontrar a posição de um elemento no array:
-let posicao = alunos.indexOf("juca");
-console.log(`O aluno Juca está na posição ${posicao}`);
-//Quebrando linha
-console.log("\n");
-
-//Utilizando o método splice para alterar um elemento do array:
-alunos.splice(1,1,"Juca");
-//Imprimindo o array completo:
-console.log(alunos);
-//Quebrando linha
-console.log("\n");
-
-//Utilizando o método splice para alterar eu remover um elemento do array:
-alunos.splice(1,2,"Arnaldo");
-//Imprimindo o array completo:
-console.log(alunos);
-//Quebrando linha
-console.log("\n");
-
-//Utilizando o método splice remover um elemento do array:
-alunos.splice(3,1);
-//Imprimindo o array completo:
-console.log(alunos);
-//Quebrando linha
-console.log("\n");
-
-alunos.splice(alunos.indexOf("Enzo"),1);
 //Imprimindo o array completo:
 console.log(alunos);
 //Quebrando linha
@@ -183,18 +190,65 @@ console.log("\n");
 
 const botaoPesquisar = document.getElementById("btnProcurar");
 
-botaoPesquisar.addEventListener("click", (evt)=>{;
+botaoPesquisar.addEventListener("click",(evt)=>{
+    console.log(evt.target);
 
-evt.preventDefault();
-
+    evt.preventDefault();
 
     //Recuperando o valor do input:
     const nome = document.getElementById("idNmAl").value;
 
     //Verificando se o nome existe no array:
-    if(alunos.indexOf(nome) != - 1){
+    if(alunos.indexOf(nome) != -1){
         alert(`O aluno ${nome} está na lista`);
     }else{
         alert(`O aluno ${nome} não está na lista`);
     }
 });
+
+//imprimindo o array com o método forEach:
+// let novoArrayComIndicesPares = alunos.forEach( (aluno,index)=>{
+//     if((index+1) % 2 == 0){
+//         console.log(`${index+1} - ${aluno}`);
+//         return `${index+1} - ${aluno}`;
+//     }
+// });
+// //Quebrando linha
+// console.log("\n");
+
+// //imprimindo o array com o método map:
+// novoArrayComIndicesPares.forEach( (aluno)=>{
+//     console.log(aluno);
+// });
+// //Quebrando linha
+// console.log("\n");
+
+// //imprimindo o array com o método map:
+// let novoArrayComIndicesPares = alunos.map( (aluno,index)=>{
+//     if((index+1) % 2 == 0){
+//         console.log(`${index+1} - ${aluno}`);
+//         return `${index+1} - ${aluno}`;
+//     }
+// });
+// //Quebrando linha
+// console.log("\n");
+
+// //imprimindo o novo array com o método filter:
+// novoArrayUndefined = novoArrayComIndicesPares.filter((aluno)=> aluno != undefined);
+// //Quebrando linha
+// console.log("\n");
+
+// //imprimindo o novo array com o método filter:
+// novoArrayUndefined.forEach((aluno)=> console.log(aluno));
+// //Quebrando linha
+// console.log("\n");
+
+// //Filtrando o array com o método filter utilizando o map:
+// let novoArrayComIndicesPares2 = alunos.map( (aluno,index)=>{
+//     if((index+1) % 2 == 0){
+//         console.log(`${index+1} - ${aluno}`);
+//         return `${index+1} - ${aluno}`;
+//     }
+// }).filter((aluno)=> aluno != undefined);
+// //Quebrando linha
+// console.log("\n");
