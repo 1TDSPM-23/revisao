@@ -2,7 +2,9 @@ body {
     font-family: Comic Sans MS, Comic Sans, cursive;
     margin: 0;
     padding: 0;
-    background-color: rgb(88, 88, 88);
+    background-image: url("https://cdn.pixabay.com/photo/2020/04/12/18/14/background-5035259_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
 }
 
 h1 {
@@ -22,6 +24,7 @@ table, th, td {
     border: 6px solid #ffffff;
     padding: 10px;
     text-align: center;
+    color: aliceblue;
 }
 
 button {
@@ -29,17 +32,19 @@ button {
     margin-top: 10px;
 }
 
-form {
+form{
     font-family: Comic Sans MS, Comic Sans, cursive;
     border: 1px solid #000000;
     padding: 10px;
     margin-top: 30px;
+    color: aliceblue;
 }
 
 label {
     font-family: Impact, fantasy;
     display: block;
     margin-bottom: 6px;
+    color: aliceblue;
 }
 
 input[type="text"] {
