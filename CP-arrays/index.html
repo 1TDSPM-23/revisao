@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coded By rm99768</title>
+    <title>Lista de tarefas</title>
     <script src="../js/tarefa.js" defer></script>
 </head>
 <body>
@@ -16,13 +16,42 @@
                 <div>
                     <label for="">Nome Tarefa:</label>
                     <input type="text" name="tarefa" id="idTarefa" placeholder="Digite o nome da Tarefa.">
-                    <label for=""></label>
                 </div>
                 <div>
+                    <br>
+                    <label for="">Descrição:</label>
+                    <input type="text" name="descricao" id="idDescricao" placeholder="Digite a descrição da tarefa">
+                </div>
+                <div>
+                    <br>
+                    <label for="">Autor:</label>
+                    <input type="text" name="autor" id="idAutor" placeholder="Digite o autor da tarefa">
+                </div>
+                <div>
+                    <br>
+                    <label for="">Departamento:</label>
+                    <input type="text" name="departamento" id="idDepartamento" placeholder="Digite o departamento da tarefa">
+                </div>
+                <div>
+                    <br>
+                    <label for="">Importância</label>
+                    <input type="text" name="importancia" id="idImportancia" placeholder="Informe a importância da tarefa">
+                </div>
+                <div>
+                    <br>
                     <button type="submit" id="btnAddTarefa" class="botao">Adicionar</button>
                 </div>
             </fieldset>
         </form>
+    </div>
+    <div>
+        <br>
+        <tr>
+            <th>Nome tarefa</th>
+            <th>Descrição</th>
+            <th>Departamento</th>
+            <th>Importância</th>
+        </tr>
     </div>
     <div>
         <nav>
