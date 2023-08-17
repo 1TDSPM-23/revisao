@@ -2,56 +2,74 @@
 let tarefaDone= []
 
 const btnAddTarefa = document.querySelector("#btnAddTarefa");
-const taskList = document.querySelector('#taskList');
-const addTaskForm = document.querySelector('#addTaskForm');
-  
-    addTaskForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-  
-        const Descricao = document.querySelector('#descricao').value;
-        tarefaDone.push(Descricao.value)
-  
-        const Autor = document.querySelector('#autor').value;
-        tarefaDone.push(Autor.value)
-  
-        const Departamento = document.querySelector('#departamento').value;
-        tarefaDone.push(Departamento.value)
-  
-        const Importancia = document.querySelector('#importancia').value;
-        tarefaDone.push(Importancia.value)
-   
-        const newTask = {
-          descricao: Descricao,
-          autor: Autor,
-          departamento: Departamento,
-          importancia: Importancia
-      };
-  
-      taskList(newTask);
-        addTaskForm.reset();
+
+btnAddTarefa.addEventListener("click",( evt )=>{
+
+    evt.preventDefault();
+
+    const descricao = document.querySelector("#descricao");
+    tarefaDone.push(descricao.value)
+    const listaDes = document.querySelector("#Descricao");
+    listaDes.appendChild(l1);
+
+    const autor = document.querySelector("#autor");
+    tarefaDone.push(autor.value)
+    const listaAut = document.querySelector("#Autor");
+    listaAut.appendChild(l2);
+
+
+    const departamento = document.querySelector("#departamento");
+    tarefaDone.push(departamento.value)
+    const listaDepar = document.querySelector("#Departamento");
+    listaDepar.appendChild(l3);
+
+    const importância = document.querySelector("#importância");
+    tarefaDone.push(importância.value)
+    const listaImpor = document.querySelector("#Importância");
+    listaImpor.appendChild(l4);
+
+    let l1 = document.createElement("l1");
+    let l2 = document.createElement("l2");
+    let l3 = document.createElement("l3");
+    let l4 = document.createElement("l4");
+
+    l1.textContent = tarefaDone.value;
+    l2.textContent = tarefaDone.value;
+    l3.textContent = tarefaDone.value;
+    l4.textContent = tarefaDone.value;
+
+    let removeBtn = document.createElement("button");
+
+    removeBtn.textContent = " FEITO ";
+
+    li.appendChild(removeBtn);
+
+
+    removeBtn.addEventListener("click", (evt)=>{
+       
+        let conteudoDol1 = evt.target.parentNode.textContent.split(" ");
+        let conteudoDol2 = evt.target.parentNode.textContent.split(" ");
+        let conteudoDol3 = evt.target.parentNode.textContent.split(" ");
+        let conteudoDol4 = evt.target.parentNode.textContent.split(" ");
+        
+        let indice1 = tarefaDone.indexOf(conteudoDol1[0])
+        let indice2 = tarefaDone.indexOf(conteudoDol2[0])
+        let indice3 = tarefaDone.indexOf(conteudoDol3[0])
+        let indice4 = tarefaDone.indexOf(conteudoDol4[0])
+
+
+        tarefaDone.splice(indice1,1);
+        tarefaDone.splice(indice2,1);
+        tarefaDone.splice(indice3,1);
+        tarefaDone.splice(indice4,1);
+        
+
+        evt.target.parentNode.remove();
+
+        console.log(tarefaDone);
     });
-  
-    function taskList(tarefa) {
-        const newRow = document.createElement('tr');
-        newRow.innerHTML = `
-            <td>${tarefa.Descricao}</td>
-            <td>${tarefa.Autor}</td>
-            <td>${tarefa.Departamento}</td>
-            <td>${tarefa.Importancia}</td>
-            <td><button class="removeBtn">Remover</button></td>
-        `;
-  taskList.appendChild(newRow);
-  
-        removeBtn.textContent = " DELETE ";
-  
-        li.appendChild(removeBtn);
-  
-        const removeBtn = newRow.querySelector('.removeBtn');
-        removeBtn.addEventListener("click", (evt)=>{
-          let conteudoDoLi = evt.target.parentNode.textContent.split(" ");
-          let indice = taskList.indexOf(conteudoDoLi[0])
-          taskList.splice(indice,1);
-          evt.target.parentNode.remove();
-          console.log(taskList);
-      });
-    };
+
+    console.log(tarefaDone);
+    tarefaInput.value = "";
+    
+});

@@ -32,9 +32,9 @@ button {
     margin-top: 10px;
 }
 
-form{
+form, fieldset{
     font-family: Comic Sans MS, Comic Sans, cursive;
-    border: 1px solid #000000;
+    border: 2px solid #ffffff;
     padding: 10px;
     margin-top: 30px;
     color: aliceblue;
@@ -52,6 +52,7 @@ input[type="text"] {
     width: 100%;
     padding: 4px;
     margin-bottom: 10px;
-    background-color: #000000;
+    background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p3/6469230-abstrato-branco-e-cinza-gradiente-linhas-fundo-gratis-vetor.jpg");
+    background-repeat: no-repeat;
     color: rgb(255, 255, 255);
 }

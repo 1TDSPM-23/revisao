@@ -1,7 +1,7 @@
 
 let listaTarefasArray = [];
 
-//const botaAddTarefa = document.getElementById("btnAddTarefa");
+// const botaAddTarefa = document.getElementById("btnAddTarefa");
 const botaAddTarefa = document.querySelector("#btnAddTarefa");
 
 botaAddTarefa.addEventListener("click",( evt )=>{
@@ -36,7 +36,7 @@ botaAddTarefa.addEventListener("click",( evt )=>{
         ///Removendo o indice selecionado com o método splice
         listaTarefasArray.splice(indice,1);
         
-        //Removendo o elemento li do HTML
+        ///Removendo o elemento 'li' do 'HTML'
         evt.target.parentNode.remove();
 
         console.log(listaTarefasArray);
