@@ -1,31 +1,30 @@
 
 let tarefaDone= []
 
-document.addEventListener('DOMContentLoaded', function() {
-    const btnAddTarefa = document.querySelector("#btnAddTarefa");
-    const taskList = document.querySelector('#taskList');
-    const addTaskForm = document.querySelector('#addTaskForm');
+const btnAddTarefa = document.querySelector("#btnAddTarefa");
+const taskList = document.querySelector('#taskList');
+const addTaskForm = document.querySelector('#addTaskForm');
   
     addTaskForm.addEventListener('submit', function(event) {
         event.preventDefault();
   
-        const descricao = document.querySelector('#descricao').value;
-        tarefaDone.push(descricao.value)
+        const Descricao = document.querySelector('#descricao').value;
+        tarefaDone.push(Descricao.value)
   
-        const autor = document.querySelector('#autor').value;
-        tarefaDone.push(autor.value)
+        const Autor = document.querySelector('#autor').value;
+        tarefaDone.push(Autor.value)
   
-        const departamento = document.querySelector('#departamento').value;
-        tarefaDone.push(departamento.value)
+        const Departamento = document.querySelector('#departamento').value;
+        tarefaDone.push(Departamento.value)
   
-        const importancia = document.querySelector('#importancia').value;
-        tarefaDone.push(importancia.value)
+        const Importancia = document.querySelector('#importancia').value;
+        tarefaDone.push(Importancia.value)
    
         const newTask = {
-          descricao: descricao,
-          autor: autor,
-          departamento: departamento,
-          importancia: importancia
+          descricao: Descricao,
+          autor: Autor,
+          departamento: Departamento,
+          importancia: Importancia
       };
   
       taskList(newTask);
@@ -35,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function taskList(tarefa) {
         const newRow = document.createElement('tr');
         newRow.innerHTML = `
-            <td>${tarefa.descricao}</td>
-            <td>${tarefa.autor}</td>
-            <td>${tarefa.departamento}</td>
-            <td>${tarefa.importancia}</td>
+            <td>${tarefa.Descricao}</td>
+            <td>${tarefa.Autor}</td>
+            <td>${tarefa.Departamento}</td>
+            <td>${tarefa.Importancia}</td>
             <td><button class="removeBtn">Remover</button></td>
         `;
   taskList.appendChild(newRow);
@@ -55,5 +54,4 @@ document.addEventListener('DOMContentLoaded', function() {
           evt.target.parentNode.remove();
           console.log(taskList);
       });
-  
-  }});
+    };
