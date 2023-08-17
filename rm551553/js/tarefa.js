@@ -27,7 +27,7 @@ botaAddTarefa.addEventListener("click",( evt )=>{
     listaTarefasUL.appendChild(li);
 
     botaoExcluir.addEventListener("click", (evt)=>{
-        //Pegando o texto do Li e colocando em uma variável
+        //Pegando o texto do 'Li' e colocando em uma variável
         let conteudoDoLi = evt.target.parentNode.textContent.split(" ");
         // console.log(conteudoDoLi[0]);
         //Localizando o indice do elemento a ser removido
