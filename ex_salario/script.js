@@ -1,4 +1,4 @@
-let salarios = [1200, 2200, 1820, 2800, 10000, 1900, 4000, 2600, 1750, 3000];
+let salarios = [1100, 2800, 1450, 2220, 10000, 1900, 4001, 2707, 1950, 3000];
 
 function aplicarAumento(salario) {
   if (salario <= 2000) {

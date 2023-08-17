@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="../CSS/styles.css">
-    <script src="./js/script.js" defer></script>
+    <script src="../JS/script.js" defer></script>
 </head>
 <body>
     <h1>Lista de Tarefas</h1>
@@ -19,12 +19,9 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody id="taskList">
-            <!-- Linhas da tabela serão adicionadas aqui -->
-        </tbody>
     </table>
     <div>
-        <form action="#" method="get" id="addTaskForm">
+        <form action="#" method="get">
             <fieldset>
                 <legend>Nova Tarefa</legend>
                 <div>
@@ -44,10 +41,34 @@
                     <input type="text" name="importancia" id="importancia" required>
                 </div>
                 <div>
-                    <button type="submit">Adicionar Tarefa</button>
+                    <button type="submit" id="btnAddTarefa" class="botao">Add Tarefa</button>
                 </div>
             </fieldset>
         </form>
     </div>
+    <tbody id="taskList">
+        <fieldset>
+            <legend>Tarefas Adicionadas</legend>
+            <div>
+                <label for="descricaoAdd">Descrição:</label>
+                <ul id="descricao"></ul>
+            </div>
+            <div>
+                <label for="autorAdd">Autor:</label>
+                <ul id="autor"></ul>
+            </div>
+            <div>
+                <label for="departamentoAdd">Departamento:</label>
+                <ul id="departamento"></ul>
+            </div>
+            <div>
+                <label for="importanciaAdd">Importância:</label>
+                <ul id="importancia"></ul>
+            </div>
+            <div>
+                <button type="button" id="removeBtn" class="botao">Tarefa Feita</button>
+            </div>
+        </fieldset>
+    </tbody>
 </body>
 </html>
