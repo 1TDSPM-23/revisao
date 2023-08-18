@@ -24,8 +24,10 @@ table {
 table, th, td {
     border: 6px solid #ffffff;
     padding: 10px;
-    text-align: center;
+    text-align: left;
     color: aliceblue;
+    font-size: 30px;
+    background-image: url("https://image.winudf.com/v2/image/Y29tLlBSSVNTSS5XYWxscGFwZXIuQmxhY2suQmxhY2tCYWNrZ3JvdW5kV2FsbHBhcGVySERfc2NyZWVuXzNfMTUyOTQ1MzU1OF8wMDg/screen-3.webp?fakeurl=1&type=.webp");
 }
 
 button {
@@ -39,6 +41,9 @@ form, fieldset{
     padding: 10px;
     margin-top: 30px;
     color: aliceblue;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/000/833/489/non_2x/black-abstract-background-with-diamond-shape-layers-vector.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 label {
@@ -54,5 +59,5 @@ input[type="text"] {
     padding: 3px;
     margin-bottom: 10px;
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5lIw4FZ_UL38X85GgNDRTpGCNjYjsFg_XYA&usqp=CAU");
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
