@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const taskList = document.querySelector('#taskList');
-  const addTaskForm = document.querySelector('#addTaskForm');
+    tasksList = [];
+    const taskList = document.querySelector('#taskList');
+    const addTaskForm = document.querySelector('#addTaskForm');
   
   addTaskForm.addEventListener('submit', function(event) {
       event.preventDefault();
@@ -10,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const departamento = document.querySelector('#departamento').value;
       const importancia = document.querySelector('#importancia').value;
       
+
+
       const newTask = {
           descricao: descricao,
           autor: autor,
@@ -17,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
           importancia: importancia
       };
       
+      tasksList.push(newTask);
+
       adicionarTarefa(newTask);
       addTaskForm.reset();
   });
