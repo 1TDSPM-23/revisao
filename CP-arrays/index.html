@@ -18,27 +18,30 @@
                     <input type="text" name="tarefa" id="idTarefa" placeholder="Digite o nome da Tarefa.">
                 </div>
                 <div>
-                    <br>
                     <label for="">Descrição:</label>
                     <input type="text" name="descricao" id="idDescricao" placeholder="Digite a descrição da tarefa">
                 </div>
                 <div>
-                    <br>
                     <label for="">Autor:</label>
                     <input type="text" name="autor" id="idAutor" placeholder="Digite o autor da tarefa">
                 </div>
                 <div>
-                    <br>
                     <label for="">Departamento:</label>
                     <input type="text" name="departamento" id="idDepartamento" placeholder="Digite o departamento da tarefa">
                 </div>
                 <div>
-                    <br>
                     <label for="">Importância</label>
-                    <input type="text" name="importancia" id="idImportancia" placeholder="Informe a importância da tarefa">
+                    <input type="text" name="importancia" id="idImportancia" placeholder="Importancia de 1 a 10">
                 </div>
                 <div>
-                    <br>
+                    <label for="">Valor:</label>
+                    <input type="text" name="valor" id="idValor" placeholder="Digite o valor">
+                </div>
+                <div>
+                    <label for="">Duração</label>
+                    <input type="text" name="duracao" id="idDuracao" placeholder="Digite a duração">
+                </div>
+                <div>
                     <button type="submit" id="btnAddTarefa" class="botao">Adicionar</button>
                 </div>
             </fieldset>
@@ -46,12 +49,16 @@
     </div>
     <div>
         <br>
-        <tr>
-            <td>Nome tarefa</td>
-            <td>Descrição</td>
-            <td>Departamento</td>
-            <td>Importância</td>
-        </tr>
+        <table id="listaTarefas">
+            <tr>
+                <td>Nome tarefa</td>
+                <td>Descrição</td>
+                <td>Departamento</td>
+                <td>Importância</td>
+                <td>Valor</td>
+                <td>Duração</td>
+            </tr>
+        </table>
     </div>
     <div>
         <nav>
@@ -59,7 +66,11 @@
         </nav>
     </div>
     <div>
-        <ul id="lista-tarefas"></ul>
+        <br>
+        <button type="submit" id="btnOrdenar">Ordenar</button>
+    </div>
+    <div>
+        <table id="listaTarefasOrdenadas"></table>
     </div>
 
 </body>
