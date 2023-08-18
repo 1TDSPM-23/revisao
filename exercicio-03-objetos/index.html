@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coded by RM552075</title>
+    <script src="./script-objetos.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>LISTA DE TAREFAS</h1>
+    
+
+    <div>
+        <form action="#" method="get" id="addTask">
+            <fieldset>
+                <legend>Adicionar Tarefa</legend>
+                <div>
+                    <label for="">Descrição</label>
+                    <input type="text" name="descricao" id="idDescricao" autocomplete="off" placeholder="Descrição da tarefa">
+                </div>
+                <div>
+                    <label for="">Autor</label>
+                    <input type="text" name="autor" id="idAutor" autocomplete="off" placeholder="Autor da tarefa">
+                </div>
+                <div>
+                    <label for="">Departamento</label>
+                    <input type="text" name="departamento" id="idDepartamento" autocomplete="off" placeholder="Departamento da tarefa">
+                </div>
+                <div>
+                    <label for="">Importância</label>
+                    <input type="number" name="importancia" id="idImportancia" autocomplete="off" placeholder="Nível de importância da tarefa">
+                </div>
+                <div>
+                    <label for="">Será feita à parte?</label>
+                    <input type="checkbox" name="feitaAParte" id="idFeitaAParte" onclick="validacao()">
+                </div>
+                <div>
+                    <label for="">Valor</label>
+                    <input type="number" name="importancia" id="idValor" disabled>
+                </div>
+                <div>
+                    <label for="">Duração</label>
+                    <input type="number" name="importancia" id="idDuracao" disabled>
+                </div>
+                <button type="submit" id="idBtnAddTask">Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+    
+    <table>
+        <tr>
+            <th>Descrição</th>
+            <th>Autor</th>
+            <th>Departamento</th>
+            <th>Importância</th>
+            <th>Valor</th>
+            <th>Duração</th>
+        </tr>
+        <tbody id="idTabela">
+            
+        </tbody>
+    </table>
+
+    <h2>Tarefas Importantes</h2>
+    <div id="idTabImportante">
+        
+    </div>
+</body>
+</html>
