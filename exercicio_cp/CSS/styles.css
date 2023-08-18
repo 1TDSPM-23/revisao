@@ -5,6 +5,7 @@ body {
     background-image: url("https://cdn.pixabay.com/photo/2020/04/12/18/14/background-5035259_1280.jpg");
     background-repeat: no-repeat;
     background-size: 1920px 1080px;
+    color: #ffffff;
 }
 
 h1 {
@@ -50,9 +51,8 @@ label {
 input[type="text"] {
     font-family: Snell Roundhand, cursive;
     width: 100%;
-    padding: 4px;
+    padding: 3px;
     margin-bottom: 10px;
-    background-image: url("https://static.vecteezy.com/ti/vetor-gratis/p3/6469230-abstrato-branco-e-cinza-gradiente-linhas-fundo-gratis-vetor.jpg");
-    background-repeat: no-repeat;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5lIw4FZ_UL38X85GgNDRTpGCNjYjsFg_XYA&usqp=CAU");
     color: rgb(255, 255, 255);
 }
