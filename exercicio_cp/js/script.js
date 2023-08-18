@@ -9,23 +9,23 @@ btnAddTarefa.addEventListener("click",( evt )=>{
 
     const descricao = document.querySelector("#descricao");
     tarefaDone.push(descricao.value)
-    const listaDes = document.querySelector("#Descricao");
+    const listaDes = document.querySelector("#tarefaDescricao");
     listaDes.appendChild(l1);
 
     const autor = document.querySelector("#autor");
     tarefaDone.push(autor.value)
-    const listaAut = document.querySelector("#Autor");
+    const listaAut = document.querySelector("#tarefaAutor");
     listaAut.appendChild(l2);
 
 
     const departamento = document.querySelector("#departamento");
     tarefaDone.push(departamento.value)
-    const listaDepar = document.querySelector("#Departamento");
+    const listaDepar = document.querySelector("#tarefaDepartamento");
     listaDepar.appendChild(l3);
 
     const importância = document.querySelector("#importância");
     tarefaDone.push(importância.value)
-    const listaImpor = document.querySelector("#Importância");
+    const listaImpor = document.querySelector("#tarefaImportância");
     listaImpor.appendChild(l4);
 
     let l1 = document.createElement("l1");
