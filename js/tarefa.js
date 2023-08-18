@@ -116,6 +116,7 @@ botaoAddTarefa.addEventListener("click",( evt )=>{
     //Não permite que a lista ordenada duplique
         listaOrdenacao.innerHTML = "";
 
+//Fiz o for para o código saber que o elemento que ele precisa pegar é o elemento.descricao
         for (const elemento of listaTarefasOrdenadas){
             let trOrdenacao = document.createElement("tr");
             let tdDescricaoOrdenacao = document.createElement("td");
