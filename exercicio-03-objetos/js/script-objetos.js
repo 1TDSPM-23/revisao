@@ -7,7 +7,6 @@ let campoValor = document.getElementById("idValor");
 let campoDuracao = document.getElementById("idDuracao");
 
 
-
 btnAddTask.addEventListener("click", (evt) => {
     evt.preventDefault();
 
@@ -38,11 +37,13 @@ btnAddTask.addEventListener("click", (evt) => {
         };
     
         listaTarefas.push(dados);
-        organizarLista(listaTarefas);
+        listaTarefasOrganizada = organizarLista(listaTarefas);
 
         console.log(listaTarefas);
     
         addTarefa(dados);
+
+        addTarefaImportante(listaTarefasOrganizada, dados);
     }
     else alert("Preencha todos os campos disponíveis")
 
@@ -63,7 +64,7 @@ function addTarefa(tarefa){
     <td>${tarefa.importancia}</td>
     <td>${tarefa.valor}</td>
     <td>${tarefa.duracao}</td>
-    <button class="idBtnDelTask"> X </button>
+    <button class="idBtnDelTask">X</button>
     `;
 
     tabela.appendChild(tr);
@@ -89,20 +90,63 @@ function validacao(){
     else {
         campoValor.setAttribute("disabled", true);
         campoDuracao.setAttribute("disabled", true);
+        campoValor.value = "";
+        campoDuracao.value = "";
     }
 }
 
 function organizarLista(lista){
-    lista.sort((a, b) => a.importancia - b.importancia);
+    lista.sort((a, b) => a.importancia - b.importancia);   
 }
 
-function addTarefaImportante(tarefa){
+function addTarefaImportante(lista, tarefa){
     const tImportante = document.getElementById("idTabImportante");
     const ul = document.createElement("ul");
 
     ul.innerHTML = `
-    <li>Importância: ${tarefa.importancia} | Descrição: ${tarefa.descricao}</li>
+    <li class="tarefa">Importância: ${tarefa.importancia} | Descrição: ${tarefa.descricao}</li>
+    <button class="idBtnDelTask">X</button>
     `
-
     tImportante.appendChild(ul);
+
+    const delTarefaBtn = ul.querySelector(".idBtnDelTask");
+    delTarefaBtn.addEventListener("click", (evt) =>{
+    ul.remove();
+})
 }
+//Funcionando
+// const tImportante = document.getElementById("idTabImportante");
+// const ul = document.createElement("ul");
+
+// ul.innerHTML = `
+//     <li class="tarefa">Importância: ${tarefa.importancia} | Descrição: ${tarefa.descricao}</li>
+//     <button class="idBtnDelTask">X</button>
+//     `
+// tImportante.appendChild(ul);
+
+// const delTarefaBtn = ul.querySelector(".idBtnDelTask");
+// delTarefaBtn.addEventListener("click", (evt) =>{
+//     ul.remove();
+// })
+
+//Teste
+/*
+const tImportante = document.getElementById("idTabImportante");
+    const ul = document.createElement("ul");
+    
+    tImportante.innerHTML = `
+        <li class="tarefa">Importância: ${tarefa.importancia} | Descrição: ${tarefa.descricao}</li>
+        <button class="idBtnDelTask">X</button>
+        `
+    tImportante.appendChild(ul);
+
+    const delTarefaBtn = ul.querySelector(".idBtnDelTask");
+    delTarefaBtn.addEventListener("click", (evt) =>{
+        ul.remove();
+    })
+
+    const tarefas = Array.from(tImportante.getElementsByClassName("tarefa"));
+
+    for(let tarefa of lista){
+        tImportante.insertBefore(tarefa, tImportante.firstChild);
+    }*/ 
