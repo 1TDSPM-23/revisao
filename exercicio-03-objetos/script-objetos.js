@@ -48,9 +48,6 @@ btnAddTask.addEventListener("click", (evt) => {
 
     let btnDelTask = document.getElementById("idBtnDelTask");
 
-    btnDelTask.addEventListener("click", (evt) => {
-        evt.target.parentNode.remove();
-    })
 })
 
 
@@ -66,15 +63,22 @@ function addTarefa(tarefa){
     <td>${tarefa.importancia}</td>
     <td>${tarefa.valor}</td>
     <td>${tarefa.duracao}</td>
-    <button id="idBtnDelTask" onclick="delTarefa()"> X </button>
-    `
+    <button class="idBtnDelTask"> X </button>
+    `;
 
     tabela.appendChild(tr);
 
+    const delTarefaBtn = tr.querySelector(".idBtnDelTask");
+    delTarefaBtn.addEventListener("click", (evt) =>{
+        const rowIndex = Array.from(tabela.getElementsByTagName("tr")).indexOf(tr);
+        delTarefa(rowIndex);
+        console.log(listaTarefas)
+        tr.remove();
+    })
 }
 
 function delTarefa(index){
-
+    listaTarefas.splice(index, 1);
 }
 
 function validacao(){
